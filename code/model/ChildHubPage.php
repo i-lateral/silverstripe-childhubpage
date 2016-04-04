@@ -27,7 +27,8 @@ class ChildHubPage extends Page
                 "ShowChildrenAs",
                 _t("ChildHubPage.ShowChildrenAs", "Show children of this page as a"),
                 $this->dbobject("ShowChildrenAs")->enumValues()
-            )
+            ),
+            "CanViewType"
         );
         
         return $fields;
