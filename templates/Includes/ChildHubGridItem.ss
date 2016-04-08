@@ -5,11 +5,11 @@
     <% if $SummaryImage %>
         <p>
             <a href="{$Link}">
-                $SummaryImage.CroppedImage(330,330)
+                <img src="$SummaryImage.CroppedImage(330,330).URL" class="img-respnsive">
             </a>
         </p>
     <% end_if %>
-    
+     
     <p>$Content.FirstParagraph</p>
     
     <p>
