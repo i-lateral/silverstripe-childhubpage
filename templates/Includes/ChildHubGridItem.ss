@@ -5,7 +5,7 @@
     <% if $SummaryImage %>
         <p>
             <a href="{$Link}">
-                <img src="$SummaryImage.CroppedImage(330,330).URL" class="img-respnsive">
+                <img src="$SummaryImage.CroppedImage(330,330).URL" class="img-responsive">
             </a>
         </p>
     <% end_if %>

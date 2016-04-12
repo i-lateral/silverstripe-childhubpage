@@ -3,7 +3,7 @@
         <div class="unit size1of3 unit-33 col-md-4">
             <p>
                 <a href="{$Link}">
-					<img src="$SummaryImage.CroppedImage(330,330).URL" class="img-respnsive">
+					<img src="$SummaryImage.CroppedImage(330,330).URL" class="img-responsive">
                 </a>
             </p>
         </div>
