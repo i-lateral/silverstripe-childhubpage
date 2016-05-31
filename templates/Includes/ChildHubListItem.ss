@@ -13,7 +13,11 @@
         <h2>
             <a href="{$Link}">{$Title}</a>
         </h2>
-        <p>$Content.FirstParagraph</p>
+		<% if $SummaryContent %>
+			<p>$SummaryContent</p>
+		<% else %>
+			<p>$Content.FirstParagraph</p>
+		<% end_if %>
         <p>
             <a class="btn btn-primary" href="{$Link}"> 
                 <%t ChildHubPage.More "More" %>
