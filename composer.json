@@ -1,9 +1,16 @@
 {
   "name": "i-lateral/silverstripe-childhubpage",
   "description": "Simple Silverstripe module that shows child pages as either a list or grid",
-  "type": "silverstripe-module",
+  "type": "silverstripe-vendormodule",
     "homepage": "https://github.com/i-lateral/silverstripe-childhubpage",
-    "keywords": ["silverstripe", "children", "hub", "list", "grid"],
+    "keywords": [
+        "silverstripe",
+        "children",
+        "sub-pages",
+        "hub",
+        "list",
+        "grid"
+    ],
     "license": "BSD-3-Clause",
     "authors": [
         {
@@ -15,9 +22,11 @@
         "issues": "https://github.com/i-lateral/silverstripe-childhubpage/issues"
     },
     "require": {
-        "silverstripe/framework": ">=3.1"
+        "silverstripe/cms": "~4.0"
     },
-    "extra": {
-        "installer-name": "childhubpage"
+    "autoload": {
+        "psr-4": {
+            "ilateral\\SilverStripe\\ChildHubPage\\": "src/"
+        }
     }
 }

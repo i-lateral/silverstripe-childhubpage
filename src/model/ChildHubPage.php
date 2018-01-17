@@ -1,5 +1,13 @@
 <?php
 
+namespace ilateral\SilverStripe\ChildHubPage\Model;
+
+use SilverStripe\Forms\DropdownField;
+use Page;
+
+/**
+ * Generate a page
+ */
 class ChildHubPage extends Page
 {
     
@@ -13,9 +21,9 @@ class ChildHubPage extends Page
      */
     private static $description = 'Display all children of this page as either a list or grid';
         
-    private static $db = array(
-        "ShowChildrenAs" => "Enum('Grid,List','Grid')"
-    );
+    private static $db = [
+        "ShowChildrenAs" => "Enum(array('Grid','List'),'Grid')"
+    ];
     
     public function getSettingsFields()
     {
