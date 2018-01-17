@@ -10,7 +10,8 @@ use Page;
  */
 class ChildHubPage extends Page
 {
-    
+    private static $table_name = 'ChildHubPage';
+
     /**
      * @var string
      */
