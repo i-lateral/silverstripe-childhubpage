@@ -3,6 +3,7 @@
 namespace ilateral\SilverStripe\ChildHubPage\Model;
 
 use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\CheckboxField;
 use Page;
 
 /**
@@ -23,23 +24,30 @@ class ChildHubPage extends Page
     private static $description = 'Display all children of this page as either a list or grid';
         
     private static $db = [
-        "ShowChildrenAs" => "Enum(array('Grid','List'),'Grid')"
+        "ShowChildrenAs" => "Enum(array('Grid','List'),'Grid')",
+        "ShowSideBar" => "Boolean"
     ];
     
     public function getSettingsFields()
     {
         $fields = parent::getSettingsFields();
-        
-        $fields->addFieldToTab(
+
+        $fields->addFieldsToTab(
             "Root.Settings",
-            DropdownField::create(
-                "ShowChildrenAs",
-                _t("ChildHubPage.ShowChildrenAs", "Show children of this page as a"),
-                $this->dbobject("ShowChildrenAs")->enumValues()
-            ),
+            [
+                DropdownField::create(
+                    "ShowChildrenAs",
+                    $this->fieldLabel("ShowChildrenAs"),
+                    $this->dbobject("ShowChildrenAs")->enumValues()
+                ),
+                CheckboxField::create(
+                    'ShowSideBar',
+                    $this->fieldLabel("ShowSideBar")
+                )
+            ],
             "CanViewType"
         );
-        
+
         return $fields;
     }
     
