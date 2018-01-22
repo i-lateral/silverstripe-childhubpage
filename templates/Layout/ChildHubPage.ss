@@ -1,4 +1,8 @@
-<div class="content-container">
+<% if $ShowSideBar && $Menu(2) %>
+    <% include SideBar %>
+<% end_if %>
+
+<div class="content-container<% if $ShowSideBar && $Menu(2) %> unit size3of4 lastUnit col-md-3<% end_if %>">
 	<article>
 		<h1>$Title</h1>
 		<div class="content">$Content</div>
@@ -11,7 +15,7 @@
                     <% loop $PaginatedChildren %>
                         <% include ChildHubGridItem %>
                         
-                        <% if $MultipleOf(3) %></div><div class="line row units-row child-list"><% end_if %>
+                        <% if $MultipleOf(3) && not $Last %></div><div class="line row units-row child-list"><% end_if %>
                     <% end_loop %>
                 </div>
             <% else %>
