@@ -23,3 +23,7 @@ SS4 updates to add:
 * Minor update to docs
 * Add ability to show a sidebar
 * Extra config files
+
+## 2.0.2
+
+* Minor template changes
