@@ -27,3 +27,7 @@ SS4 updates to add:
 ## 2.0.2
 
 * Minor template changes
+
+## 2.0.3
+
+* Add SS3 - SS4 upgrade config 

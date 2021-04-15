@@ -1,0 +1,6 @@
+---
+Name: childhubpagelegacy
+---
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    ChildHubPage: ilateral\SilverStripe\ChildHubPage\Model\ChildHubPage
