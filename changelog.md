@@ -31,3 +31,7 @@ SS4 updates to add:
 ## 2.0.3
 
 * Add SS3 - SS4 upgrade config 
+
+## 2.0.4
+
+* Move line end conditional for grid into relevent include (for easier template manipulation)

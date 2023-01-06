@@ -13,9 +13,7 @@
             <% if $ShowChildrenAs == "Grid" %>
                 <div class="line row units-row child-list">
                     <% loop $PaginatedChildren %>
-                        <% include ilateral\\SilverStripe\\ChildHubPage\\ChildHubGridItem %>
-                        
-                        <% if $MultipleOf(3) && not $Last %></div><div class="line row units-row child-list"><% end_if %>
+                        <% include ilateral\\SilverStripe\\ChildHubPage\\ChildHubGridItem AddLineEnd=true %>
                     <% end_loop %>
                 </div>
             <% else %>

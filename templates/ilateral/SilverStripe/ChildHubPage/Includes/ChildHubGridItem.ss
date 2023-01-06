@@ -18,3 +18,7 @@
         </a>
     </p>
 </div>
+
+<% if $AddLineEnd == 'true' && $MultipleOf(3) && not $Last %>
+</div><div class="line row units-row child-list">
+<% end_if %>
